@@ -13,5 +13,5 @@ while True:
     input = GPIO.input(4)
     print(input)
     if (input):
-        os.system("aplay " + SOUND_DEVICE + " " + ALARM_FILE)
+        os.system("aplay --device " + SOUND_DEVICE + " " + ALARM_FILE)
     time.sleep(0.5)
