@@ -3,7 +3,7 @@ import os
 import time
 
 SOUND_DEVICE = "front:CARD=Device,DEV=0"
-ALARM_FILE = "yippee-tbh.wav"
+ALARM_FILE = "alarm.wav"
 
 GPIO.setmode(GPIO.BCM)
 os.system("amixer set Master 100%")
