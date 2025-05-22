@@ -13,11 +13,16 @@ os.system("amixer set Master " + str(VOLUME) + "%")
 
 # Pins
 GPIO.setup(4, GPIO.IN)  # Laser sensor
-
+GPIO.setup(14, GPIO.IN)  # IR sensor
 
 while True:
-    input = GPIO.input(4)
-    print(input)
-    if (input):
+    laserIn = GPIO.input(4)  # Laser sensor
+    irIn = GPIO.input(14)  # IR sensor
+
+    # Prints
+    print("Laser:", laserIn)
+    print("IR:", irIn)
+    
+    if (laserIn or irIn):
         os.system("aplay --device " + SOUND_DEVICE + " " + ALARM_FILE)
     time.sleep(CLOCK)
