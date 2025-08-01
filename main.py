@@ -4,7 +4,7 @@ import time
 
 # Constants
 SOUND_DEVICE = "front:CARD=Device,DEV=0"
-ALARM_FILE = "alarm4.wav"
+ALARM_FILE = "alarm.wav"
 VOLUME = 10  # Out of 100
 CLOCK = 0.05  # Seconds to wait between checking the sensor(s)
 
